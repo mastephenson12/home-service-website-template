@@ -1,6 +1,8 @@
-export const business = {
+export const businessConfig = {
   companyName: "Example Roofing Company",
   trade: "Roofing",
+
+  tagline: "Straight answers. Better roofs.",
 
   contact: {
     phone: "(555) 555-5555",
@@ -21,14 +23,46 @@ export const business = {
     ],
   },
 
-  branding: {
-    tagline: "Straight answers. Better roofs.",
-    logo: "/images/logo.png",
-  },
+  services: [
+    {
+      name: "Roof Repair",
+      slug: "roof-repair",
+      description:
+        "Help homeowners diagnose and repair leaks, damaged shingles, flashing problems, and other common roofing issues.",
+    },
+    {
+      name: "Roof Replacement",
+      slug: "roof-replacement",
+      description:
+        "Complete roof replacement options for aging, damaged, or failing roofing systems.",
+    },
+    {
+      name: "Roof Inspection",
+      slug: "roof-inspection",
+      description:
+        "Professional roof inspections to identify damage, maintenance needs, and potential problems before they get worse.",
+    },
+    {
+      name: "Storm Damage",
+      slug: "storm-damage",
+      description:
+        "Inspection and repair guidance for roofs affected by wind, hail, monsoon storms, and other severe weather.",
+    },
+  ],
 
   callsToAction: {
-    primary: "Request an Inspection",
-    secondary: "Get a Roof Estimate",
+    primary: {
+      label: "Request an Inspection",
+      href: "/contact",
+    },
+    secondary: {
+      label: "Get a Roof Estimate",
+      href: "/estimate",
+    },
+  },
+
+  branding: {
+    logo: "/images/logo.png",
   },
 
   links: {
@@ -36,27 +70,9 @@ export const business = {
     googleBusinessProfile: "",
     facebook: "",
     instagram: "",
+    linkedin: "",
     youtube: "",
   },
-
-  services: [
-    {
-      name: "Roof Repair",
-      slug: "roof-repair",
-    },
-    {
-      name: "Roof Replacement",
-      slug: "roof-replacement",
-    },
-    {
-      name: "Roof Inspection",
-      slug: "roof-inspection",
-    },
-    {
-      name: "Storm Damage",
-      slug: "storm-damage",
-    },
-  ],
 } as const;
 
-export type BusinessConfig = typeof business;
+export type BusinessConfig = typeof businessConfig;
